@@ -1,38 +1,62 @@
 @model List<Category>
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Category";
 }
-
 <!DOCTYPE html>
 
 <html>
-<head>
-    <title>Category</title>
-</head>
-<body>
-<div>
-  <table class="table">
-    <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Display Order</th>
-      <th scope="col">Created time</th>
-    </tr>
-    </thead>
-    <tbody>
-   @foreach (var obj in Model)
-       {
-           <tr>
-               <th scope="row">@obj.Id</th>
-               <td>@obj.Name</td>
-               <td>@obj.DisplayOder</td>
-               <td>@obj.CreatedDataTime</td>
-           </tr>
-       }
-    </tbody>
-  </table>
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h1 class="text-primary">Category</h1>
+        </div>
+    <div class="col-6 text-end">
+        @* <a class="btn btn-primary" asp-controller="Categories" asp-action="CreateCategory">Create</a> *@
+    </div>
 </div>
-</body>
+    <br />
+    <body>
+
+        <div>
+            <table class="table table-bordered table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>
+                            Category ID
+                        </th>
+                        <th>
+                            Category Name
+                        </th>
+                        <th>
+                            Display Order
+                        </th>
+                        <th>
+                            CreatedDataTime
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td width="20%">
+                                @obj.Id
+                            </td>
+                            <td width="30%">
+                                @obj.Name
+                            </td>
+                            <td width="30%">
+                                @obj.DisplayOder
+                            </td>
+                            <td width="20%">
+                                @obj.CreatedDataTime
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </body>
+</div>
 </html>
