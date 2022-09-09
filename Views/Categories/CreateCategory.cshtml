@@ -10,10 +10,12 @@
             @* don't need "Name" when we have asp-for *@
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="DisplayOder"></label>
             <input asp-for="DisplayOder" class="form-control" />
+            <span asp-validation-for="DisplayOder" class="text-danger"></span>
         </div>
         @* <div class="mb-3"> *@
         @*     <label asp-for="CreatedDataTime"></label> *@

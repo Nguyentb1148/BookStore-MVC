@@ -32,11 +32,16 @@ public class CategoriesController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult CreateCategory(Category obj)
     {
-        _db.Categories.Add(obj);//not add data in database yet
-        _db.SaveChanges();// SaveChanges will save date we input in the form to database
-        return RedirectToAction("Index");
-        //User return when we turn back to Index view when we submit in Create category view
-        // if we want to return other view, use ("Index","other controller")
+        if (ModelState.IsValid)
+        {
+            _db.Categories.Add(obj); //not add data in database yet
+            _db.SaveChanges(); // SaveChanges will save date we input in the form to database
+            return RedirectToAction("Index");
+            //User RedirectToAction when we turn back to Index view when we submit in Create category view
+            // if we want to return other view, use ("Index","other controller")
+        }
+
+        return View(obj);
     }
 
 
