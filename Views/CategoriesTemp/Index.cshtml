@@ -5,12 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<div class="container p-3">
+<div class="row pt-10">
+    <div class="col-6">
+        <h1 class="text-primary">Category</h1>
+    </div>
+    <div class="col-6 text-end">
+        <a class="btn btn-primary" asp-controller="Categories" asp-action="CreateCategory">
+            <i class="bi bi-journal-plus"></i> Create
+        </a>
+    </div>
+</div>
+</div>
+<table class="table table-bordered table-striped" style="width:100%">
     <thead>
         <tr>
             <th>
@@ -28,19 +35,27 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td width="10%">
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
+            <td width="20">
                 @Html.DisplayFor(modelItem => item.DisplayOder)
             </td>
-            <td>
+            <td width="30%">
                 @Html.DisplayFor(modelItem => item.CreatedDataTime)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <td width="10%">
+                <div class=" btn-group" role="group">
+                    <a  >
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success"> Edit</a>
+                    </a>
+                    <a  >
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info "> Detail </a>
+                    </a>
+                    <a >
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger"> Delete</a>
+                    </a>
+                </div>
             </td>
         </tr>
 }

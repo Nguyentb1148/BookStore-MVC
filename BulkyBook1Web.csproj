@@ -20,6 +20,49 @@
     <None Remove="Microsoft.AspNetCore.Mvc.Razor" />
     <None Remove="Microsoft.AspNetCore.Mvc.Razor.Extensions" />
     <None Remove="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" />
+    <None Include="wwwroot\img\AV00133\AV00133_1.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_10.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_11.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_2.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_3.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_4.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_5.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_6.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_7.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_8.jpeg" />
+    <None Include="wwwroot\img\AV00133\AV00133_9.jpeg" />
+    <None Include="wwwroot\img\logo.png" />
+    <None Include="wwwroot\img\product1\1.jpg" />
+    <None Include="wwwroot\img\product1\2.jpg" />
+    <None Include="wwwroot\img\product1\3.jpg" />
+    <None Include="wwwroot\img\product1\4.jpg" />
+    <None Include="wwwroot\img\product2\1.jpg" />
+    <None Include="wwwroot\img\product2\2.jpg" />
+    <None Include="wwwroot\img\product2\3.jpg" />
+    <None Include="wwwroot\img\product2\4.jpg" />
+    <None Include="wwwroot\img\product3\1.jpg" />
+    <None Include="wwwroot\img\product3\2.jpg" />
+    <None Include="wwwroot\img\product3\3.jpg" />
+    <None Include="wwwroot\img\product3\4.jpg" />
+    <None Include="wwwroot\img\product4\1.jpg" />
+    <None Include="wwwroot\img\product4\2.jpg" />
+    <None Include="wwwroot\img\product4\3.jpg" />
+    <None Include="wwwroot\img\product4\4.jpg" />
+    <None Include="wwwroot\img\product4\5.jpg" />
+    <None Include="wwwroot\img\product4\5.png" />
+    <None Include="wwwroot\img\product4\6.jpg" />
+    <None Include="wwwroot\img\product4\6.png" />
+    <None Include="wwwroot\img\product4\7.jpg" />
+    <None Include="wwwroot\img\product4\7.png" />
+    <None Include="wwwroot\img\product4\8.png" />
+    <None Include="wwwroot\img\slide\1.png" />
+    <None Include="wwwroot\img\slide\2.png" />
+    <None Include="wwwroot\img\slide\3.png" />
+    <None Include="wwwroot\img\slide\4.png" />
+    <None Include="wwwroot\img\team\1.png" />
+    <None Include="wwwroot\img\team\2.png" />
+    <None Include="wwwroot\img\team\3.png" />
+    <None Include="wwwroot\js\script.js" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.8" />
@@ -45,5 +88,44 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="font-awesome\css\font-awesome.css" />
+    <Content Include="font-awesome\css\font-awesome.min.css" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="font-awesome\HELP-US-OUT.txt" />
+    <Content Include="font-awesome\less\animated.less" />
+    <Content Include="font-awesome\less\bordered-pulled.less" />
+    <Content Include="font-awesome\less\core.less" />
+    <Content Include="font-awesome\less\fixed-width.less" />
+    <Content Include="font-awesome\less\font-awesome.less" />
+    <Content Include="font-awesome\less\icons.less" />
+    <Content Include="font-awesome\less\larger.less" />
+    <Content Include="font-awesome\less\list.less" />
+    <Content Include="font-awesome\less\mixins.less" />
+    <Content Include="font-awesome\less\path.less" />
+    <Content Include="font-awesome\less\rotated-flipped.less" />
+    <Content Include="font-awesome\less\screen-reader.less" />
+    <Content Include="font-awesome\less\stacked.less" />
+    <Content Include="font-awesome\less\variables.less" />
+    <Content Include="font-awesome\scss\font-awesome.scss" />
+    <Content Include="font-awesome\scss\_animated.scss" />
+    <Content Include="font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="font-awesome\scss\_core.scss" />
+    <Content Include="font-awesome\scss\_fixed-width.scss" />
+    <Content Include="font-awesome\scss\_icons.scss" />
+    <Content Include="font-awesome\scss\_larger.scss" />
+    <Content Include="font-awesome\scss\_list.scss" />
+    <Content Include="font-awesome\scss\_mixins.scss" />
+    <Content Include="font-awesome\scss\_path.scss" />
+    <Content Include="font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="font-awesome\scss\_screen-reader.scss" />
+    <Content Include="font-awesome\scss\_stacked.scss" />
+    <Content Include="font-awesome\scss\_variables.scss" />
   </ItemGroup>
 </Project>
