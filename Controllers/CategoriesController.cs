@@ -48,6 +48,38 @@ public class CategoriesController : Controller
 
         return View(obj);
     }
-
-
+    //GET
+    public IActionResult EditCategory(int? id)
+    {
+        if (id == null||id==0)
+        {
+            return NotFound();
+        }
+        var categoryFormDb = _db.Categories.Find(id);
+        // var CategoryFormDbFirst = _db.Categories.FirstOrDefault(u=>u.Id==id);
+        // var CategoryFormDbSingle = _db.Categories.SingleOrDefault(u=>u.Id==id);
+        if (categoryFormDb==null)
+        {
+            return NotFound();
+        }
+        return View(categoryFormDb);
+    }
+    
+    //POST
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult EditCategory(Category obj)
+    {
+        if (obj.Name==obj.DisplayOder.ToString())
+        {
+            ModelState.AddModelError("CustomError","The DisplayOrder cannot exactly match the Name");
+        }
+        if (ModelState.IsValid)
+        {
+            _db.Categories.Add(obj);
+            _db.SaveChanges(); 
+            return RedirectToAction("Index");
+        }
+        return View(obj);
+    }
 }
