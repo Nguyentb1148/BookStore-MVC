@@ -12088,24 +12088,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/tranbaonguyen/.nuget/packages/": {}
+    "C:\\Users\\dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/BulkyBook1Web.csproj",
+      "projectUniqueName": "C:\\Users\\dell\\FirstMVCWeb\\BulkyBook1Web.csproj",
       "projectName": "BulkyBook1Web",
-      "projectPath": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/BulkyBook1Web.csproj",
-      "packagesPath": "/Users/tranbaonguyen/.nuget/packages/",
-      "outputPath": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/obj/",
+      "projectPath": "C:\\Users\\dell\\FirstMVCWeb\\BulkyBook1Web.csproj",
+      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dell\\FirstMVCWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/tranbaonguyen/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12187,8 +12189,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -12200,7 +12201,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
