@@ -16,9 +16,8 @@ public class CategoriesController : Controller
     // GET all category from DB
     public IActionResult Index()
     {
-        //  var categoryFromDb = _db.Categories.ToList();
-        //  return View(categoryFromDb);
-        return View();
+        var categoryFromDb = _db.Categories.ToList();
+        return View(categoryFromDb);
     }
     //Create new Category
     // create nhu vay la dung roi nha
@@ -39,8 +38,9 @@ public class CategoriesController : Controller
     // }
     public IActionResult CreateCategory()
     {
-        var categoryFromDb = _db.Categories.ToList();
-        return View(categoryFromDb);
+        
+        return View();
     }
+    
 
 }

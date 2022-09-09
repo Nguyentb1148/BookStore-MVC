@@ -1,7 +1,25 @@
-﻿
-@{
-    ViewData["Title"] = "CreateCategory";
-}
+﻿@model Category
 
-<h1>CreateCategory</h1>
-
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Category</h2>
+            <hr/>
+        </div>
+        <div class="mb-3">
+            @* don't need "Name" when we have asp-for *@
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="DisplayOder"></label>
+            <input asp-for="DisplayOder" class="form-control" />
+        </div>
+        @* <div class="mb-3"> *@
+        @*     <label asp-for="CreatedDataTime"></label> *@
+        @*     <input asp-for="CreatedDataTime" class="form-control" /> *@
+        @* </div> *@
+        <button type="submit" class="btn btn-primary" style="width: 150px">Create</button>
+        <a asp-controller="Categories" asp-action="Index" class="btn btn-primary" style="width: 150px">Back to list</a>
+    </div>
+</form>
