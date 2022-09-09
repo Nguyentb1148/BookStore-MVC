@@ -23,7 +23,6 @@ public class CategoriesController : Controller
     //GET
     public IActionResult CreateCategory()
     {
-        
         return View();
     }
     
@@ -41,6 +40,7 @@ public class CategoriesController : Controller
         {
             _db.Categories.Add(obj); //not add data in database yet
             _db.SaveChanges(); // SaveChanges will save date we input in the form to database
+            TempData["Success"] = "Category created  successfully";// Make notification
             return RedirectToAction("Index");
             //User RedirectToAction when we turn back to Index view when we submit in Create category view
             // if we want to return other view, use ("Index","other controller")
@@ -76,10 +76,43 @@ public class CategoriesController : Controller
         }
         if (ModelState.IsValid)
         {
-            _db.Categories.Add(obj);
+            _db.Categories.Update(obj);
             _db.SaveChanges(); 
+            TempData["Success"] = "Category updated  successfully";
+
             return RedirectToAction("Index");
         }
         return View(obj);
+    }
+    
+    public IActionResult DeleteCategory(int? id)
+    {
+        if (id == null||id==0)
+        {
+            return NotFound();
+        }
+        var categoryFormDb = _db.Categories.Find(id);
+       
+        if (categoryFormDb==null)
+        {
+            return NotFound();
+        }
+        return View(categoryFormDb);
+    }
+    
+    //POST
+    [HttpPost,ActionName("Delete")]//Change action name(DeleteCategoryPOST -> Delete)
+    [ValidateAntiForgeryToken]
+    public IActionResult DeleteCategoryPOST(int? id)
+    {
+        var obj = _db.Categories.Find(id);
+        if (obj==null)
+        {
+            return NotFound();
+        }
+        _db.Categories.Remove(obj);
+        _db.SaveChanges(); 
+        TempData["Success"] = "Category deleted  successfully";
+        return RedirectToAction("Index");
     }
 }
