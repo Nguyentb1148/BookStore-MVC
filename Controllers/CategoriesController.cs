@@ -19,28 +19,25 @@ public class CategoriesController : Controller
         var categoryFromDb = _db.Categories.ToList();
         return View(categoryFromDb);
     }
-    //Create new Category
-    // create nhu vay la dung roi nha
-
-
-    // debuger ko nguyen phong ko biet xai app nay noi
-    // [HttpPost]
-    // public IActionResult CreateCategory(Category category)
-    // {
-    //     if (ModelState.IsValid)
-    //     {
-    //         _db.Categories.Add(category);
-    //         _db.SaveChanges();
-    //         return RedirectToAction(nameof(Index));
-    //     }
-    //
-    //     return View(category);
-    // }
+    
+    //GET
     public IActionResult CreateCategory()
     {
         
         return View();
     }
     
+    //POST
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult CreateCategory(Category obj)
+    {
+        _db.Categories.Add(obj);//not add data in database yet
+        _db.SaveChanges();// SaveChanges will save date we input in the form to database
+        return RedirectToAction("Index");
+        //User return when we turn back to Index view when we submit in Create category view
+        // if we want to return other view, use ("Index","other controller")
+    }
+
 
 }
