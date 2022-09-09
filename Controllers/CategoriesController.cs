@@ -32,6 +32,11 @@ public class CategoriesController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult CreateCategory(Category obj)
     {
+        if (obj.Name==obj.DisplayOder.ToString())
+        {
+            // Can use key"name" to get Errormessage under the field
+            ModelState.AddModelError("CustomError","The DisplayOrder cannot exactly match the Name");
+        }
         if (ModelState.IsValid)
         {
             _db.Categories.Add(obj); //not add data in database yet
