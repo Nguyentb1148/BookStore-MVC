@@ -11,6 +11,7 @@ namespace BulkyBook1Web.Data
 
         }
         public DbSet<Category> Categories { get; set; }
+        
     }
 }
 
