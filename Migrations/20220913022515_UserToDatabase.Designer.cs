@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BulkyBook1Web.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20220908032411_db")]
-    partial class db
+    [Migration("20220913022515_UserToDatabase")]
+    partial class UserToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,6 +45,31 @@ namespace BulkyBook1Web.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("BulkyBook1Web.Models.User", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

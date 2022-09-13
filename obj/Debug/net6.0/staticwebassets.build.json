@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s0+LEuOUFLWAdBg57jrJ38XDu2/U0gp5vW2k/Yrfk0c=",
+  "Hash": "BDuY3rWKiw2416xBeEwGIxEpkfnT0qEmUdJSbWinP0A=",
   "Source": "BulkyBook1Web",
   "BasePath": "_content/BulkyBook1Web",
   "Mode": "Default",
@@ -884,6 +884,23 @@
       "OriginalItemSpec": "wwwroot/css/style.css"
     },
     {
+      "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/css/styles.css",
+      "SourceId": "BulkyBook1Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/",
+      "BasePath": "_content/BulkyBook1Web",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/styles.css"
+    },
+    {
       "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/favicon.ico",
       "SourceId": "BulkyBook1Web",
       "SourceType": "Discovered",
@@ -1120,6 +1137,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/AV00133/AV00133_9.jpeg"
+    },
+    {
+      "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/img/login/log.svg",
+      "SourceId": "BulkyBook1Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/",
+      "BasePath": "_content/BulkyBook1Web",
+      "RelativePath": "img/login/log.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/login/log.svg"
+    },
+    {
+      "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/img/login/register.svg",
+      "SourceId": "BulkyBook1Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/",
+      "BasePath": "_content/BulkyBook1Web",
+      "RelativePath": "img/login/register.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/login/register.svg"
     },
     {
       "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/img/logo.ico",
@@ -1664,6 +1715,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/team/3.png"
+    },
+    {
+      "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/js/app.js",
+      "SourceId": "BulkyBook1Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/",
+      "BasePath": "_content/BulkyBook1Web",
+      "RelativePath": "js/app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/app.js"
     },
     {
       "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/js/script.js",
