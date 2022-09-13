@@ -101,12 +101,12 @@ public class UsersController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult DeleteUserPost(int? id)
     {
-        var obj = _db.Categories.Find(id);
+        var obj = _db.Users.Find(id);
         if (obj==null)
         {
             return NotFound();
         }
-        _db.Categories.Remove(obj);
+        _db.Users.Remove(obj);
         _db.SaveChanges(); 
         TempData["Success"] = "Category deleted  successfully";
         return RedirectToAction("Index");
