@@ -45,7 +45,6 @@ public class CategoriesController : Controller
             //User RedirectToAction when we turn back to Index view when we submit in Create category view
             // if we want to return other view, use ("Index","other controller")
         }
-
         return View(obj);
     }
     //GET

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63dd4b95-46fe-47a3-989b-dbb05bea274d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/wwwroot/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Users/IndexUsers.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Users/IndexUsers.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/BulkyBook1Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/BulkyBook1Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/BulkyBook1Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/BulkyBook1Web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/BulkyBook1Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/BulkyBook1Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/BulkyBook1Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/BulkyBook1Web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ref/BulkyBook1Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ref/BulkyBook1Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/refint/BulkyBook1Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/refint/BulkyBook1Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2EhBaYxHrDhAD6YVutsI7n4tAY6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63dd4b95-46fe-47a3-989b-dbb05bea274d" name="Changes" comment="" />
+      <created>1663038004163</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663038004163</updated>
+      <workItem from="1663038009543" duration="599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

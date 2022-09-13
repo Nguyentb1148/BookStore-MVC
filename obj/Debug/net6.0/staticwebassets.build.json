@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BDuY3rWKiw2416xBeEwGIxEpkfnT0qEmUdJSbWinP0A=",
+  "Hash": "OxHFNTbCPs7ebNi50kGLmZDksy/9U2QCeR5rdLHSxLE=",
   "Source": "BulkyBook1Web",
   "BasePath": "_content/BulkyBook1Web",
   "Mode": "Default",
@@ -848,6 +848,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/BootswatchTheme.css"
+    },
+    {
+      "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/css/font-awesome.css",
+      "SourceId": "BulkyBook1Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/",
+      "BasePath": "_content/BulkyBook1Web",
+      "RelativePath": "css/font-awesome.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/font-awesome.css"
     },
     {
       "Identity": "/Users/tranbaonguyen/Desktop/BulkyBook1/BulkyBook1Web/wwwroot/css/site.css",

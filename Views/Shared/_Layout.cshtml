@@ -6,58 +6,65 @@
     <title>@ViewData["Title"] - BulkyBook1Web</title>
     <link rel="stylesheet" href="~/css/BootswatchTheme.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="~/css/styles.css"/>
+    @* <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" /> *@
+    @* <link rel="stylesheet" href="~/css/font-awesome.css"> *@
+    @* <link rel="stylesheet" href="~/css/style.css"/> *@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href='https://css.gg/details-more.css' rel='stylesheet'>
     @* <link rel="stylesheet" href="~/BulkyBook1Web.styles.css" asp-append-version="true" /> *@
 </head>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <div id="menu-bar" class="fa fa-bars"></div>
-            <img src="img/logo.ico" height="40">
-            <nav class="navbar">
-                <a class="nav-link "  asp-controller="Home" asp-action="Index">Home</a>
-                <a class="nav-link "  asp-controller="CategoriesTemp" asp-action="Index">Category</a>
-                <a class="nav-link "  asp-controller="Users" asp-action="IndexUsers">User</a>
-            </nav>
-            <nav class="navbar-end">
-                <button class="btn btn-sm btn-outline-success"> Log in </button>
-                <button class="btn btn-sm btn-outline-info"> Sign up </button>
-            </nav>
-            @* <div class="icons"> *@
-            @*     <a href="#"><i class="fa fa-heart"></i></a> *@
-            @*     <a href="#"><i class="fa fa-shopping-cart"></i></a> *@
-            @*     <a href="#"><i class="fa fa-user"></i></a> *@
-            @* </div> *@
-        </header>
-        <!--end header-->
-        
-        <!--end product-->
-        
-    </body>
-</html>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<script src="js/script.js"></script>
- <div class="container">
-        <main role="main" class="pb-3">
-            <partial name="_Notification"/>
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="footer text-muted bg-dark">
-        <div class="container">
-            &copy; 2022 - BulkyBook1Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link "  asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "  asp-controller="CategoriesTemp" asp-action="Index">Category Temp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "  asp-controller="Users" asp-action="Index">User</a>
+                    </li>
+                    
+                </ul>
+                <ul class="login">
+                    @* <input class="form-control me-sm-2" type="text" placeholder="Search"> *@
+                    @* <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> *@
+                    <li class="nav-item">
+                        <a class="btn btn-primary" asp-controller="Users" asp-action="Login" > Sign in </a>
+                        <a class="btn btn-secondary"> Sign up </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    </nav>
+        
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        <partial name="_Notification" />
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="footer text-muted bg-dark">
+    <div class="container">
+        &copy; 2021 - BulkyBookWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
