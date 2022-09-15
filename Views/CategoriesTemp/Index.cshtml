@@ -1,15 +1,23 @@
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
 @model IEnumerable<BulkyBook1Web.Models.Category>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if (ViewBag.Pager!=null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
 }
 <html>
 <div class="container" id="categoriesTemp">
     <div class="row">
         <div class="col-6">
-            <h1 class="text-primary">Category</h1>
+            <h1 class="text-primary">Category Temp</h1>
         </div>
         <div class="col-6 text-end">
             <a class="btn btn-primary" asp-controller="CategoriesTemp" asp-action="Create">
@@ -73,4 +81,36 @@
     }
     </tbody>
 </table>
+<div class="container">
+    @if (pager.TotalPages > 0)
+    {
+        <ul class="pagination justify-content-end ">
+             @if (pager.CurrentPage>1)
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-controller="CategoriesTemp" asp-action="Index" asp-route-pg="1">First</a>
+                </li>
+                <li>
+                    <a class="page-link" asp-controller="CategoriesTemp" asp-action="Index" asp-route-pg="@(pager.CurrentPage-1)">Previous</a>
+                </li>
+            }
+            
+             @for (var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+            {
+                <li class="page-item @(pge == pager.CurrentPage ? "active" : "")">
+                    <a class="page-link" asp-controller="CategoriesTemp" asp-action="Index" asp-route-pg="@pge">@pge</a>
+                </li>
+            }
+            @if (pager.CurrentPage < pager.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-controller="CategoriesTemp" asp-action="Index" asp-route-pg="@(pager.CurrentPage+1)">Next</a>
+                </li>
+                <li >
+                    <a class="page-link" asp-controller="CategoriesTemp" asp-action="Index" asp-route-pg="@(pager.TotalPages)">Last</a>
+                </li>
+            }
+        </ul>
+    }
+</div>
 </html>

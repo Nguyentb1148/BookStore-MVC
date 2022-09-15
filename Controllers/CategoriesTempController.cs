@@ -20,11 +20,22 @@ namespace BulkyBook1Web.Controllers
         }
 
         // GET: CategoriesTemp
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pg=1)
         {
-              return _context.Categories != null ? 
-                          View(await _context.Categories.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDBContext.Categories'  is null.");
+            List<Category> categories = _context.Categories.ToList();
+
+            const int pageSize = 5;
+            if (pg < 1)
+                pg = 1;
+            int recsCount = categories.Count;
+            var pager = new Pager(recsCount, pg, pageSize);
+            int recSkip = (pg - 1) * pageSize;
+            var data = categories.Skip(recSkip).Take(pager.PageSize).ToList();
+            this.ViewBag.Pager = pager;
+            return View(data);
+            // return _context.Categories != null ? 
+            // View(await _context.Categories.ToListAsync()) :
+            // Problem("Entity set 'ApplicationDBContext.Categories'  is null.");
         }
 
         // GET: CategoriesTemp/Details/5
@@ -159,6 +170,7 @@ namespace BulkyBook1Web.Controllers
         {
           return (_context.Categories?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+        
         
     }
 }
