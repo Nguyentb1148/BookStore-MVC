@@ -15,8 +15,6 @@ namespace BulkyBook1Web.Models
         public int DisplayOder { get; set; }
         [DisplayName("Create DataTime")]
         public DateTime CreatedDataTime { get; set; } = DateTime.Now;
-
-
     }
 }
 

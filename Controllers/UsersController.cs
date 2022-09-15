@@ -1,6 +1,7 @@
 using BulkyBook1Web.Data;
 using BulkyBook1Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BulkyBook1Web.Controllers;
 
@@ -110,5 +111,18 @@ public class UsersController : Controller
         _db.SaveChanges(); 
         TempData["Success"] = "Category deleted  successfully";
         return RedirectToAction("Index");
+    }
+    
+    [HttpGet]
+    public async Task<IActionResult> Index(string search)
+    {
+        ViewData["Getuserdata"] = search;
+        var userQuery = from x in _db.Users select x;
+        if (!string.IsNullOrEmpty(search))
+        {
+            userQuery = userQuery.Where(x=>x.name.Contains(search)||x.email.Contains(search));
+        }
+
+        return View(await userQuery.AsTracking().ToListAsync());
     }
 }

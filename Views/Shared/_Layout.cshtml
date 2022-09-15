@@ -35,15 +35,11 @@
                     <li class="nav-item">
                         <a class="nav-link "  asp-controller="Users" asp-action="Index">User</a>
                     </li>
-                    
                 </ul>
                 <ul class="login">
-                    @* <input class="form-control me-sm-2" type="text" placeholder="Search"> *@
-                    @* <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> *@
-                    <li class="nav-item">
-                        <a class="btn btn-primary" asp-controller="Users" asp-action="Login" > Sign in </a>
-                        <a class="btn btn-secondary"> Sign up </a>
-                    </li>
+                    <li class="login-position"></li>
+                    <a class="btn btn-secondary my-sm-0"> Sign in </a>
+                    <a class="btn btn-primary my-sm-0" asp-controller="Users" asp-action="Login"> Sign up </a>
                 </ul>
             </div>
         </div>

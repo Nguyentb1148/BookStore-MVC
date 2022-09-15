@@ -12,8 +12,13 @@
         </div>
     <div class="col-6 text-end">
         <a class="btn btn-primary" asp-controller="Users" asp-action="Login">
-            <i class="bi bi-journal-plus"></i> Create
-        </a>
+            <i class="bi bi-journal-plus"></i> Create</a>
+        <form class="d-flex ">
+            <input class="form-control me-sm-2" type="search" placeholder="Search user with name or email"
+                   value="@ViewData["Getuserdata"]" name="search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit" value="search">Search</button>
+            <a asp-action="Index">Get all users</a>
+        </form>
     </div>
 </div>
     <br />

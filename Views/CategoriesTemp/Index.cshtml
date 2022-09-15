@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 <html>
 <div class="container" id="categoriesTemp">
@@ -11,15 +12,22 @@
             <h1 class="text-primary">Category</h1>
         </div>
         <div class="col-6 text-end">
-            <a class="btn btn-primary" asp-controller="Categories" asp-action="CreateCategory">
-                <i class="bi bi-journal-plus"></i> Create
-            </a>
+            <a class="btn btn-primary" asp-controller="CategoriesTemp" asp-action="Create">
+                <i class="bi bi-journal-plus"></i> Create</a>
+            <form class="d-flex ">
+                <input class="form-control me-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <br/>
         </div>
     </div>
 </div>
 <table class="table table-bordered table-striped" style="width:100%">
     <thead>
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -36,29 +44,32 @@
     @foreach (var item in Model)
     {
         <tr>
-        <td >
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td >
-            @Html.DisplayFor(modelItem => item.DisplayOder)
-        </td>
-        <td >
-            @Html.DisplayFor(modelItem => item.CreatedDataTime)
-        </td>
-        <td width="5%">
-            <div class=" btn-group" role="group">
-                <a >
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success"> Edit</a>
-                </a>
-                <a >
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info "> Detail </a>
-                </a>
-                <a >
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger"> Delete</a>
-                </a>
-            </div>
-        </td>
-    </tr>
+            <td >
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td >
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td >
+                @Html.DisplayFor(modelItem => item.DisplayOder)
+            </td>
+            <td >
+                @Html.DisplayFor(modelItem => item.CreatedDataTime)
+            </td>
+            <td width="5%">
+                <div class=" btn-group" role="group">
+                    <a >
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success"> Edit</a>
+                    </a>
+                    <a >
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info "> Detail </a>
+                    </a>
+                    <a >
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger"> Delete</a>
+                    </a>
+                </div>
+            </td>
+        </tr>
     }
     </tbody>
 </table>
