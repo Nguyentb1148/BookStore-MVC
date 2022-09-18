@@ -10,11 +10,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(
      builder.Configuration.GetConnectionString("DefaultConnection") 
     ));
-builder.Services.AddDbContext<AuthDbContext>(options =>options.UseSqlServer(
-    //Different***
-    builder.Configuration.GetConnectionString("AuthConnectionString"
-    ) ));
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<AuthDbContext>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
  
 //Example
