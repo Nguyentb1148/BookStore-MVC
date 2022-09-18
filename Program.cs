@@ -1,4 +1,6 @@
 ﻿using BulkyBook1Web.Data;
+using BulkyBook1Web.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +10,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(
      builder.Configuration.GetConnectionString("DefaultConnection") 
     ));
-
+builder.Services.AddDbContext<AuthDbContext>(options =>options.UseSqlServer(
+    //Different***
+    builder.Configuration.GetConnectionString("AuthConnectionString"
+    ) ));
+builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<AuthDbContext>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
  
 //Example
@@ -26,6 +32,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+//***
+app.UseAuthentication();
 
 app.UseAuthorization();
 

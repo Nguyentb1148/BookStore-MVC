@@ -1,7 +1,9 @@
 using BulkyBook1Web.Data;
 using BulkyBook1Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Services.Graph;
 
 namespace BulkyBook1Web.Controllers;
 
@@ -9,6 +11,7 @@ public class UsersController : Controller
 {
     private readonly ApplicationDBContext _db;
 
+   
     public UsersController(ApplicationDBContext db)
     {
         _db = db;
@@ -19,7 +22,7 @@ public class UsersController : Controller
         var usersFromDb = _db.Users.ToList();
         return View(usersFromDb);    }
     //GET
-    public IActionResult Login()
+    public IActionResult Register()
     {
         return View();
     }
@@ -27,13 +30,8 @@ public class UsersController : Controller
     //POST
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Login(User obj)
+    public IActionResult Register(User obj)
     {
-        // if (obj.Name==obj.DisplayOder.ToString())
-        // {
-        //     // Can use key"name" to get Errormessage under the field
-        //     ModelState.AddModelError("CustomError","The DisplayOrder cannot exactly match the Name");
-        // }
         if (ModelState.IsValid)
         {
             _db.Users.Add(obj); //not add data in database yet
@@ -45,6 +43,7 @@ public class UsersController : Controller
         }
         return View(obj);
     }
+    
     //GET
     public IActionResult Edit(int? id)
     {
