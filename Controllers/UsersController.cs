@@ -44,6 +44,11 @@ public class UsersController : Controller
         return View(obj);
     }
     
+    public IActionResult Login()
+    {
+        return View();
+    }
+
     //GET
     public IActionResult Edit(int? id)
     {
